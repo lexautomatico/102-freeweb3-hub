@@ -1,0 +1,132 @@
+/* Container styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 300px; /* Add padding-top instead */
+}
+
+.header {
+  padding: 20px;
+  background-color: #282c34;
+  color: white;
+  width: 100vw; /* Set width to 100% of the viewport width */
+  text-align: center; /* Center align the text */
+}
+
+.grid {
+  display: flex;
+  flex-direction: column; /* Changed to vertical flex layout */
+  align-items: center; /* Added to center child elements horizontally */
+  padding: 20px;
+}
+
+/* ... (other styles remain the same) ... */
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Image container */
+.img-container {
+  position: relative;
+  width: 100%; /* Set width to 100% to fill the container */
+  display: inline-block;
+}
+
+
+/* Overlay on hover */
+.img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%; /* Increase the width to 110% */
+  height: 110%; /* Increase the height to 110% */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  opacity: 0; /* Initially transparent */
+  transition: opacity 0.3s ease; /* Smooth transition */
+  z-index: 1; /* Ensure the overlay appears on top */
+}
+
+
+/* Show overlay on hover */
+.img-container:hover .img-overlay {
+  opacity: 1;
+}
+
+
+
+/* Hover effect on overlay image */
+.img-container:hover .img-overlay img {
+  transform: scale(1.2); /* Scale overlay image to 120% (10% bigger) */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+@media only screen and (min-width: 1200px) {
+  .trunk {
+    width: 1200px;
+  }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 801px) {
+  .trunk {
+    width: 800px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .trunk {
+    width: 400px;
+  }
+}
+
+
+@media only screen and (max-width: 400px) {
+  .trunk {
+    width: 200px;
+  }
+}
+
+
+.box {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.trunk-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  width: 100%; /* Ensure container takes full width */
+}
+
+
+.trunk-image {
+  width: 100%; /* Set width to fill the container */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure the image behaves as a block element */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
